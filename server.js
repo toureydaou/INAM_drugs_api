@@ -8,4 +8,8 @@ app.listen(API_PORT, "localhost", () => {
   console.log(`Server running on port ${API_PORT}`);
 });
 
-app.use(drugsRoutes);
+app.use("/drugs", drugsRoutes);
+
+app.use((req, res) => {
+  res.status(404).json("404 error ressource not available !");
+});
