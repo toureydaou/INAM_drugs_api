@@ -41,7 +41,7 @@ try {
     await Drugs.sync({ alter: true });
     console.log("Database correctly initialised !");
   };
-  initDatabase();
+  //initDatabase();
 } catch (error) {
   console.log("Error when initialising the database");
   console.log(error);
